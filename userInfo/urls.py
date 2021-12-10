@@ -1,0 +1,66 @@
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('profile', ProfileRetrieveView.as_view()),
+    path('profile/update', ProfileUpdateView.as_view()),  
+    path('countries', CountriesView.as_view()),
+    path('divisions/<country_id>', DivisionsView.as_view()),
+    path('districts/<division_id>', DistrictsView.as_view()),
+    path('thana/<district_id>', ThanaView.as_view()),
+    path('postOffice/<thana_id>', PostOfficeView.as_view()),
+    path('village/<thana_id>', VillageView.as_view()),
+    path('mobile/new', MobileCreateView.as_view()),
+    path('mobile/<int:id>/update', MobileUpdateView.as_view()),
+    path('mobile/<int:id>/delete', MobileDeleteView.as_view()),
+    path('email/new', EmailCreateView.as_view()),
+    path('email/<int:id>/update', EmailUpdateView.as_view()),
+    path('email/<int:id>/delete', EmailDeleteView.as_view()),
+    path('contact-info', ContactInfo.as_view()),
+    path('guardian-info/new', GuardianInfoCreateView.as_view()),
+    path('guardian-info/update', GuardianInfoUpdateView.as_view()),
+    path('guardian-info', GuardianInfoView.as_view()),
+    path('landing-profile', LandingProfileView.as_view()),
+    path('address/new', AddressCreateView.as_view()),
+    path('address', AddressRetrieveView.as_view()),
+    path('schools/<str:key>', SchoolListView.as_view()),
+    path('school/<int:id>', SchoolDetailView.as_view()),
+    path('school-info', SchoolInfoListView.as_view()),
+    path('school-info/<int:id>', SchoolInfoView.as_view()),
+    path('school-info-create', SchoolInfoCreateView.as_view()),
+    path('school-info-update/<int:id>', SchoolInfoUpdateView.as_view()),
+    path('school-info-delete/<int:id>', SchoolInfoDeleteView.as_view()),
+    path('colleges/<str:key>', CollegeListView.as_view()),
+    path('college/<int:id>', CollegeDetailView.as_view()),
+    path('college-info', CollegeInfoListView.as_view()),
+    path('college-info/<int:id>', CollegeInfoView.as_view()),
+    path('college-info-create', CollegeInfoCreateView.as_view()),
+    path('college-info-update/<int:id>', CollegeInfoUpdateView.as_view()),
+    path('college-info-delete/<int:id>', CollegeInfoDeleteView.as_view()),
+    path('university-list/<str:key>', UniversityListView.as_view()),
+    path('university-info', UniversityInfoListView.as_view()),
+    path('university-info/<int:id>', UniversityInfoView.as_view()),
+    path('university-info-create', UniversityInfoCreateView.as_view()),
+    path('university-info-update/<int:id>', UniversityInfoUpdateView.as_view()),
+    path('university-info-delete/<int:id>', UniversityInfoDeleteView.as_view()),
+]
+
+
+'''
+path('countries/new', CountriesCreateUpdateView.as_view()),
+path('cities', CitiesRetrieveView.as_view()),
+path('cities/new', CitiesCreateUpdateView.as_view()),
+'''
+
+''' Previous Team
+path('config', ConfigurationRetrieveView.as_view()),
+path('config/new', ConfigurationCreateUpdateView.as_view()),
+path('contact', ContactRetrieveView.as_view()),
+path('contact/new', ContactCreateUpdateView.as_view()),
+path('feedback', FeedbackRetrieveView.as_view()),
+path('feedback/new', FeedbackCreateUpdateView.as_view()),
+path('currencies', CurrenciesRetrieveView.as_view()),
+path('currencies/new', CurrenciesCreateUpdateView.as_view()),
+path('social', SocialRetrieveView.as_view()),
+path('social/new', SocialCreateUpdateView.as_view()),
+'''

@@ -1,0 +1,14 @@
+Here we enlist helper link, documentation etc.
+
+setUp Radis On windows
+  "https://www.codingforentrepreneurs.com/blog/redis-on-windows"
+
+  
+deploy django in gcp standard app engine
+ "https://gitbennettgarner.medium.com/deploying-a-django-application-to-google-app-engine-f9c91a30bd35"
+
+ deploy google cloud storage
+ "https://www.youtube.com/watch?v=hJmkECmXyxY&t=647s"
+
+
+  

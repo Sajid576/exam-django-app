@@ -1,0 +1,8 @@
+.env
+.vscode/
+__pycache__/
+espace/
+venv/
+media/
+static/
+credentials.json
